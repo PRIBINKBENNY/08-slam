@@ -1,0 +1,17 @@
+[project]
+name = "slam-mcl"
+version = "0.1.0"
+description = "2D grid SLAM with scan matching and Monte Carlo localization, in NumPy."
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26"]
+
+[project.optional-dependencies]
+viz = ["matplotlib>=3.8", "pillow>=10"]
+dev = ["pytest>=8", "matplotlib>=3.8", "pillow>=10"]
+
+[tool.setuptools]
+packages = ["slam"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
